@@ -145,7 +145,32 @@ iframe {
         <form id="ticketForm">
             <input type="text" placeholder="Nom complet" required>
             <input type="tel" placeholder="Numéro WhatsApp" required>
-            <button type="submit">Confirmer</button>
+            <button type="submit">
+            Payer avec Wave
+        </button>
+
+    </form>
+
+    <div class="footer">
+        Paiement sécurisé via Wave
+        et aprés paiement veuillez recuperer vos tickets auprés de l'administration EPLP
+    </div>
+
+</div>
+
+<script>
+
+document.getElementById("ticketForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    window.location.href =
+    "https://pay.wave.com/m/M_sn_DWVj3y5Y1NZv/c/sn/?amount=5000";
+
+});
+
+</script>
         </form>
         
         <div class="footer">
